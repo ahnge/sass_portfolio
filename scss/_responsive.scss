@@ -1,0 +1,90 @@
+@include media-md {
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .nav {
+        visibility: visible;
+
+        .menu-nav {
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            background: transparent;
+            text-align: right;
+
+            &__item {
+                display: inline;
+                padding-right: 1.5rem;
+                transform: translateX(0);
+            }
+
+            &__link {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .home {
+        background-position: right 50% top 80%;
+    }
+
+    .about__bio {
+        .text-secondary {
+            font-size: 2.5rem;
+        }
+
+        & > p {
+            font-size: 1.3rem;
+            line-height: 1.3rem;
+        }
+    }
+
+    .projects {
+        &__bio-image {
+            height: 40vh;
+        }
+
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .text-secondary {
+            font-size: 3rem;
+        }
+    }
+
+    .contact {
+        background-position: left 0 top 50%;
+
+        &__list {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            position: relative;
+
+            .con {
+                .text-secondary {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    .projects {
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .home {
+        background-position: right 50% top 50%;
+    }
+}
+
+@include media-xl {
+    .projects__bio-image {
+        height: 50vh;
+    }
+}
